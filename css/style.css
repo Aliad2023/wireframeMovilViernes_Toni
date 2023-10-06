@@ -7,13 +7,64 @@
 /* *********************************** */
 
 /* Tipografía */
-@font-face {
-  font-family: "";
-  src: url("") format("woff2"), url("") format("woff");
-}
 
 /* ******************************** */
 
 /* Colores */
 
 /* ******************************** */
+
+html {
+    color: #000;
+    text-align: justify;
+    font-family: "Inria Sans", sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: normal;
+}
+
+body {
+    background: #aeb2b1;
+}
+
+/* Container */
+#container {
+    height: 100vh;
+    padding-left: 18px;
+    
+    display: grid;
+    grid-template-columns: calc(50% - 18px);
+    grid-template-rows: repeat(3, auto);
+    row-gap: 30px;
+    column-gap: 18px;
+
+    /* BANNER */
+    & .header__hamburger {
+        margin-top: 18px;
+    }
+    & .banner {
+        background: url(../img/smartphone/D_banner.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left center;
+        grid-row: 1/4;
+        grid-column: 2/3;
+    }
+    & footer {
+        font-size: 10px;
+        color: #fff;
+        background: #999996;
+        padding: 18px 18px 0 18px;
+
+        & .footer__informacion {
+            line-height: 2;
+        }
+
+        & .footer__logo {
+            padding: 18px 0 0 0;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
